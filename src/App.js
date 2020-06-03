@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "./kawaii-ricebowl.png";
-import "./App.css";
+import "./styles.scss";
 
 function App() {
   return (

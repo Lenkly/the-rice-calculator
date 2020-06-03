@@ -1,15 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap");
+
+$font-stack: "Cabin Sketch", cursive;
+$primary-color: rgb(45, 45, 45);
+$secondary-color: rgb(12, 165, 78);
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: $font-stack;
+  color: $primary-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: $font-stack;
 }
 
 .App {
@@ -35,12 +40,13 @@ code {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(44, 44, 44);
+  font-size: calc(40px + 1vmin);
+  font-weight: 400;
+  color: $primary-color;
 }
 
 .App-link {
-  color: #61dafb;
+  color: $secondary-color;
 }
 
 @keyframes App-logo-spin {

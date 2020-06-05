@@ -1,20 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap");
 
-$font-stack: "Cabin Sketch", cursive;
+$primary-font: "Cabin Sketch", serif;
+$secondary-font: "Chelsea Market", monospace;
 $primary-color: rgb(45, 45, 45);
-$secondary-color: rgb(12, 165, 78);
+$secondary-color: rgb(253, 0, 60);
+$highlight-color: rgb(255, 255, 255);
+$border-color: rgb(190, 190, 190);
 
 body {
   margin: 0;
-  font-family: $font-stack;
+  font-family: $primary-font;
   color: $primary-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: $font-stack;
+  font-family: $secondary-font;
 }
 
 .App {
@@ -24,12 +27,6 @@ code {
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -49,11 +46,80 @@ code {
   color: $secondary-color;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  margin: 0;
+  text-shadow: 2px 0 0 $highlight-color, -2px 0 0 $highlight-color,
+    0 2px 0 $highlight-color, 0 -2px 0 $highlight-color,
+    1px 1px $highlight-color, -1px -1px 0 $highlight-color,
+    1px -1px 0 $highlight-color, -1px 1px 0 $highlight-color;
+}
+
+p {
+  font-family: $secondary-font;
+  font-size: 1.25rem;
+  margin-left: 75px;
+  margin-right: 75px;
+  text-shadow: 1px 0 0 $highlight-color, -1px 0 0 $highlight-color,
+    0 1px 0 $highlight-color, 0 -1px 0 $highlight-color,
+    0.5px 0.5px $highlight-color, -0.5px -0.5px 0 $highlight-color,
+    0.5px -0.5px 0 $highlight-color, -0.5px 0.5px 0 $highlight-color;
+}
+
+.p-span {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  width: 200px;
+  background-color: $highlight-color;
+  font-family: $secondary-font;
+  position: absolute;
+  box-shadow: 0px 0px 10px 0px $border-color;
+  z-index: -1;
+}
+
+li {
+  padding: 5px;
+  border-bottom: 1px solid $border-color;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li:hover {
+  background-color: $secondary-color;
+  color: $highlight-color;
+}
+
+.button {
+  width: 200px;
+  background-color: $secondary-color;
+  padding: 10px;
+  border: none;
+  font-family: $secondary-font;
+  font-size: 1.25rem;
+}
+
+.input-rice {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-bottom: 1px solid $border-color;
+  font-family: $secondary-font;
+  font-size: 1.25rem;
+  padding: 10px;
+}
+
+.input-table {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
